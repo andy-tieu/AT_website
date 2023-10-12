@@ -54,5 +54,8 @@ p {
     background-color: white;
     padding: 5px;
     text-align: center;
+}
+
+.footer p {
     color: #1A1A1A;
 }
