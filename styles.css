@@ -87,8 +87,11 @@ p {
 }
 
 .column.middle {
+    background-color: #7A91AF;
+    border-radius: 100px;
     width: 50%;
     padding: 0;
+    margin-top: 10px;
 }
 
 .column.side {
@@ -116,7 +119,7 @@ p {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #F0EBD9;
+    background-color: #7A91AF;
 }
 
 .portrait {
@@ -126,6 +129,7 @@ p {
     width: 50%;
     padding: 20px;
     position: relative;
+    border: none;
 }
 
 .portrait:hover .overlay {
@@ -172,12 +176,17 @@ footer {
 .footer {
     text-align: center;
     width: 100%;
-    max-width: 10rem;
+    max-width: 200px;
     height: 80px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.footer img {
+    height: auto;
+    width: 50%;
 }
 
 .footer p {
@@ -190,4 +199,14 @@ footer {
 
 .footer a:hover {
     color: #7A91AF;
+}
+
+/* PROJECTS */
+.github {
+    text-align: center;
+    padding: 10px;
+}
+
+.github a{
+    color: #141D31;
 }
