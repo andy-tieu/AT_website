@@ -66,21 +66,113 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-    .navbar .links {
-        display: none;
+@media screen and (max-width: 992px) {
+    .topnav, .logo, .links,
+    .topnav li {
+        float: none;
     }
 }
 
 p {
     color: #141D31;
     text-align: center;
+    padding: 10px;
+}
+
+/* BODY */
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 30px;
+}
+
+.column.middle {
+    width: 50%;
+}
+
+.column.side {
+    width: 25%;
+}
+  
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #F0EBD9;
+}
+
+.portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 20px;
+    position: relative;
+}
+
+.portrait:hover .overlay {
+    opacity: 0.75;
+}
+
+.text {
+    color: #141D31;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portrait img {
+    border-radius: 20px;
+}
+  
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column.side .column.middle {
+        width: 100%;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: #141D31;
+    position: relative;
+    padding: 0 auto;
 }
 
 .footer {
-    background-color: #141D31;
-    padding: 5px;
     text-align: center;
+    width: 100%;
+    max-width: 10rem;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer p {
@@ -89,4 +181,8 @@ p {
 
 .footer a {
     color: #F0EBD9;
+}
+
+.footer a:hover {
+    color: #7A91AF;
 }
